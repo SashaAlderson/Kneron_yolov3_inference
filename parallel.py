@@ -4,6 +4,8 @@ from os import listdir
 from os.path import isfile, join
 from time import time
 from time import sleep
+import sys
+sys.path.append("/data1")
 
 from keras_yolo3.yolo3.model import yolo_eval
 from keras_yolo3.yolo3.utils import letterbox_image
