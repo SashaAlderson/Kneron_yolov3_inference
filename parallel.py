@@ -147,11 +147,11 @@ def main(test_args = None):
             predictions = [] # create tuple to fill with predictions
             for pred in range(len(det_res[2])):
                 # Convert y1x1y2x2 to XcYcwh with relative values
-                prediction = (str(det_res[2][pred]) + " " + str(det_res[1][pred]) + " " 
-                    + str((det_res[0][pred][1] + det_res[0][pred][3])/2/image_shape[count][0])+ " " 
-                    + str((det_res[0][pred][0] + det_res[0][pred][2])/2/image_shape[count][1])+ " " 
-                    + str((det_res[0][pred][3] - det_res[0][pred][1])/image_shape[count][0])+ " " 
-                    + str((det_res[0][pred][2] - det_res[0][pred][0])/image_shape[count][1]))
+                prediction = (str(det_res[2][pred]) + " " + str(det_res[1][pred]) + " " # cls conf
+                    + str((det_res[0][pred][1] + det_res[0][pred][3])/2/image_shape[count][0])+ " " # Xc
+                    + str((det_res[0][pred][0] + det_res[0][pred][2])/2/image_shape[count][1])+ " " # Yc
+                    + str((det_res[0][pred][3] - det_res[0][pred][1])/image_shape[count][0])+ " "   # w
+                    + str((det_res[0][pred][2] - det_res[0][pred][0])/image_shape[count][1]))       # h
 
                 predictions.append(prediction)
                 
