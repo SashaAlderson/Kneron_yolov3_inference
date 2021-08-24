@@ -11,7 +11,7 @@ git clone https://github.com/SashaAlderson/Kneron_yolov3_inference
 jupyter notebook --ip 0.0.0.0 --port 8888 --allow-root 
 ```
 Use notebook to proceed further. First steps are copied from Yolo example, but we made changes to E2E simulator files, so that you can run multiple models in the same time allowing you to use script with multithreading.
-Parallel.py
+# Parallel.py
 Parallel.py is a versatile script that allows you to run demo or inference on multiple models. 
 Run help to check arguments:
 !python /data1/parallel.py -h 
@@ -20,7 +20,7 @@ usage: parallel.py [-h] [--demo] [--image IMAGE] [--path PATH] [--nef NEF]
 [--step STEP] [--init INIT] [--model MODEL]
 [--threads THREADS] [--img-size IMG_SIZE] [--conf-t CONF_T]
 [--iou-t IOU_T]
-```
+
 Runs an inference on multiple images.
 
 optional arguments:
@@ -36,7 +36,7 @@ optional arguments:
 --img-size IMG_SIZE  image size
 --conf-t CONF_T      confidence threshold
 --iou-t IOU_T        iou threshold for NMS
-
+```
 Run Demo:
 !python /data1/parallel.py --demo --image <path_to_your_image>
 Run inference:
