@@ -1,13 +1,15 @@
 # Kneron_yolov3_inference
 ## Yolov3 evaluation
 This instruction allows to convert yolov3 from darknet to nef and evaluate mAP after convertation. Given notebook is based on Yolo example from http://doc.kneron.com/docs/#toolchain/yolo_example/ .
-Download docker and run:
+```
+# Download docker and run:
 docker pull kneron/toolchain:latest
 docker run -p 8888:8888 --rm -it -v /mnt/docker:/docker_mount kneron/toolchain:720
-In docker use jupyter notebook to get to the workspace:
+# In docker use jupyter notebook to get to the workspace:
 pip install notebook
 git clone https://github.com/SashaAlderson/Kneron_yolov3_inference
 jupyter notebook --ip 0.0.0.0 --port 8888 --allow-root 
+```
 Use notebook to proceed further. First steps are copied from Yolo example, but we made changes to E2E simulator files, so that you can run multiple models in the same time allowing you to use script with multithreading.
 Parallel.py
 Parallel.py is a versatile script that allows you to run demo or inference on multiple models. 
