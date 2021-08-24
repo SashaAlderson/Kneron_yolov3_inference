@@ -1,4 +1,3 @@
-![mAp](https://user-images.githubusercontent.com/84590713/130577377-9859270e-e06f-4fa0-92ff-b9bd48d0b1de.png)
 # Kneron_yolov3_inference
 ## Yolov3 evaluation
 This instruction allows to convert yolov3 from darknet to nef and evaluate mAP after convertation. Given notebook is based on Yolo example from http://doc.kneron.com/docs/#toolchain/yolo_example/ .
@@ -51,4 +50,4 @@ Use code from notebook to run this script on COCO images with multiple models un
 # mAP
 After all procedures in notebook are done, use https://github.com/rafaelpadilla/review_object_detection_metrics  to evaluate mAP. All required files located under /workspace/COCO/val2017.
 Your results will look similar to:
- 
+![mAp](https://user-images.githubusercontent.com/84590713/130577377-9859270e-e06f-4fa0-92ff-b9bd48d0b1de.png) 
