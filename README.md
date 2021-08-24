@@ -38,11 +38,12 @@ optional arguments:
 --conf-t CONF_T      confidence threshold
 --iou-t IOU_T        iou threshold for NMS
 ```
-## Run Demo:
+## Run Demo
 ```
 python /workspace/Kneron_yolov3_inference/parallel.py --demo --image <path_to_your_image>
 ```
-## Run inference:
+## Run inference
+example:
 ```
 python /workspace/Kneron_yolov3_inference/parallel.py –path /workspace/COCO/val2017 --model 0 --step 5 --init 0 --conf-t 0.001 --threads 16 # run inference on “0” model with 16 threads and 5 images per iteration of script
 ```
