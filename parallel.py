@@ -148,10 +148,10 @@ def main(test_args = None):
             for pred in range(len(det_res[2])):
                 # Convert y1x1y2x2 to XcYcwh with relative values
                 prediction = (str(det_res[2][pred]) + " " + str(det_res[1][pred]) + " " 
-                    + str((det_res[0][pred][1] + det_res[0][pred][3])/2/input_image.size[0])+ " " 
-                    + str((det_res[0][pred][0] + det_res[0][pred][2])/2/input_image.size[1])+ " " 
-                    + str((det_res[0][pred][3] - det_res[0][pred][1])/input_image.size[0])+ " " 
-                    + str((det_res[0][pred][2] - det_res[0][pred][0])/input_image.size[1]))
+                    + str((det_res[0][pred][1] + det_res[0][pred][3])/2/image_shape[count][0])+ " " 
+                    + str((det_res[0][pred][0] + det_res[0][pred][2])/2/image_shape[count][1])+ " " 
+                    + str((det_res[0][pred][3] - det_res[0][pred][1])/image_shape[count][0])+ " " 
+                    + str((det_res[0][pred][2] - det_res[0][pred][0])/image_shape[count][1]))
 
                 predictions.append(prediction)
                 
