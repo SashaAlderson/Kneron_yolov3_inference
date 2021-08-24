@@ -1,6 +1,6 @@
 # Kneron yolov3 inference
-## Yolov3 evaluation
 This instruction allows to convert yolov3 from darknet to nef and evaluate mAP after convertation. Given notebook is based on Yolo example from http://doc.kneron.com/docs/#toolchain/yolo_example/ .
+## download docker
 ```
 # Download docker and run:
 docker pull kneron/toolchain:latest
