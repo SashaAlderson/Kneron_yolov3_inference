@@ -10,7 +10,7 @@ pip install notebook
 git clone https://github.com/SashaAlderson/Kneron_yolov3_inference
 jupyter notebook --ip 0.0.0.0 --port 8888 --allow-root 
 ```
-Use notebook to proceed further. First steps are copied from Yolo example, but we made changes to E2E simulator files, so that you can run multiple models in the same time allowing you to use script with multithreading.
+Use notebook to proceed further. First steps are copied from Yolo example, but we made changes to E2E simulator files, so that you can run multiple models in the same time, allowing you to use script with multithreading.
 # Parallel.py
 Parallel.py is a versatile script that allows you to run demo or inference on multiple models. 
 Run help to check arguments:
