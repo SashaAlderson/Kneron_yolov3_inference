@@ -13,12 +13,12 @@ Parallel.py
 Parallel.py is a versatile script that allows you to run demo or inference on multiple models. 
 Run help to check arguments:
 !python /data1/parallel.py -h 
-
+```
 usage: parallel.py [-h] [--demo] [--image IMAGE] [--path PATH] [--nef NEF]
 [--step STEP] [--init INIT] [--model MODEL]
 [--threads THREADS] [--img-size IMG_SIZE] [--conf-t CONF_T]
 [--iou-t IOU_T]
-
+```
 Runs an inference on multiple images.
 
 optional arguments:
