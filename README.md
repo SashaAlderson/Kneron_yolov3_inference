@@ -47,7 +47,7 @@ python /workspace/Kneron_yolov3_inference/parallel.py --demo --image <path_to_yo
 /workspace/Kneron_yolov3_inference/parallel.py –path /workspace/COCO/val2017 --model 0 --step 5 --init 0 --conf-t 0.001 --threads 16 # run inference on “0” model with 16 threads and 5 images per iteration of script
 ```
 Use code from notebook to run this script on COCO images with multiple models until all predictions are made.
-mAP
+# mAP
 After all procedures in notebook are done, use https://github.com/rafaelpadilla/review_object_detection_metrics  to evaluate mAP. All required files located under /workspace/COCO/val2017.
 Your results will look similar to:
  
