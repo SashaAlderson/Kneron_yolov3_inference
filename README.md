@@ -53,3 +53,10 @@ Use code from notebook to run this script on COCO images with multiple models un
 When all procedures in notebook are done, use https://github.com/rafaelpadilla/review_object_detection_metrics  to evaluate mAP. All required files located under /workspace/COCO/val2017.
 Your results will look similar to:
 ![mAp](https://user-images.githubusercontent.com/84590713/130577377-9859270e-e06f-4fa0-92ff-b9bd48d0b1de.png) 
+
+## Yolov3-tiny
+|            model       | mAP @<br>IoU=0.5:0.95  |  mAP @<br>IoU=0.5  |  
+| :--------------------: | :--------------------: | :----------------: |
+|   Yolov3-tiny-520      | 0.114                  | 0.262              | 
+|   Yolov3-tiny-720      | 0.110                  | 0.252              | 
+| pjreddie's YOLOv3-tiny | 0.144                  | 0.325              | 
