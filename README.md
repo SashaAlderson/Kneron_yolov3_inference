@@ -46,14 +46,18 @@ python /workspace/Kneron_yolov3_inference/parallel.py --demo --image <path_to_yo
 
 ```
 # supposed to be used in a loop
-python /workspace/Kneron_yolov3_inference/parallel.py –path /workspace/COCO/val2017 --model 0 --step 5 --init 0 --conf-t 0.001 --threads 16 # run inference on “0” model with 16 threads and 5 images per iteration of script
+python /workspace/Kneron_yolov3_inference/parallel.py –path /workspace/COCO/val2014 --model 0 --step 5 --init 0 --conf-t 0.001 --threads 16 # run inference on “0” model with 16 threads and 5 images per iteration of script
 ```
 Use code from notebook to run this script on COCO images with multiple models until all predictions are made.
 # mAP
-When all procedures in notebook are done, use https://github.com/rafaelpadilla/review_object_detection_metrics  to evaluate mAP. All required files located under /workspace/COCO/val2017.
-Your results will look similar to:
-![mAp](https://user-images.githubusercontent.com/84590713/130577377-9859270e-e06f-4fa0-92ff-b9bd48d0b1de.png) 
+When all procedures in notebook are done, use https://github.com/rafaelpadilla/review_object_detection_metrics  to evaluate mAP. All required files located under /workspace/COCO/val2014.
 
+## Yolov3
+|        model      | mAP @<br>IoU=0.5:0.95  |  mAP @<br>IoU=0.5 |  
+| :---------------: | :--------------------: | :----------------:|
+|   Yolov3-520      | 0.254                  | 0.491             | 
+|   Yolov3-720      | 0.252                  | 0.489             | 
+| pjreddie's YOLOv3 | 0.330                  | 0.545             |
 ## Yolov3-tiny
 |            model       | mAP @<br>IoU=0.5:0.95  |  mAP @<br>IoU=0.5  |  
 | :--------------------: | :--------------------: | :----------------: |
