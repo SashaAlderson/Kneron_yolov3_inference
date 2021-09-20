@@ -96,8 +96,8 @@ def main(test_args = None):
         in_data = []
         
         # Check intersection between predictions and images      
-        predictions_name =[f[:12] for f in listdir(predictions_folder) if isfile(join(predictions_folder, f))]
-        images_name =[f[:12] for f in listdir(images_folder) if isfile(join(images_folder, f))]
+        predictions_name =[f[:-4] for f in listdir(predictions_folder) if isfile(join(predictions_folder, f))]
+        images_name =[f[:-4] for f in listdir(images_folder) if isfile(join(images_folder, f))]
         predicted = list(set(predictions_name) & set(images_name))
         not_predicted = images_name
 
@@ -158,7 +158,7 @@ def main(test_args = None):
             predictions = '\n'.join(predictions)
 
             # Save predictions to directory args.path/predictions/*.txt
-            with open(predictions_folder + "/" + images[count+args.model*step][:12] + ".txt", 'w') as f:
+            with open(predictions_folder + "/" + images[count+args.model*step][:-4] + ".txt", 'w') as f:
                 f.write(str(predictions))
 
             count += 1
