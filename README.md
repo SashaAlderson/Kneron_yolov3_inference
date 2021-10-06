@@ -57,7 +57,7 @@ When all procedures in notebook are done, use https://github.com/rafaelpadilla/r
 | :---------------: | :--------------------: | :----------------:|
 |   Yolov3-520      | 0.254                  | 0.491             | 
 |   Yolov3-720      | 0.252                  | 0.489             | 
-| pjreddie's YOLOv3 | 0.330                  | 0.545             |
+| pjreddie's YOLOv3 | 0.330                  | 0.553             |
 ## Yolov3-tiny
 |            model       | mAP @<br>IoU=0.5:0.95  |  mAP @<br>IoU=0.5  |  
 | :--------------------: | :--------------------: | :----------------: |
