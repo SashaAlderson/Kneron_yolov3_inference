@@ -29,6 +29,7 @@ optional arguments:
 --demo               run demo on your image
 --image IMAGE        path to your image for demo
 --path PATH          directory of your images
+--anchors ANCHORS    path to your anchors
 --nef NEF            path to your nef model
 --step STEP          number of images for one model in every step
 --init INIT          initialization time between models
