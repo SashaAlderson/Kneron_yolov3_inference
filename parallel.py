@@ -17,11 +17,10 @@ from PIL import Image
 import numpy as np
 
 
-def postprocess(inf_results, ori_image_shape, conf_t  , iou_t ):
+def postprocess(inf_results, ori_image_shape, conf_t  , iou_t , anchors_path):
     tensor_data = [tf.convert_to_tensor(data, dtype=tf.float32) for data in inf_results]
 
     # Get anchor info
-    anchors_path = "/data1/keras_yolo3/model_data/yolo_anchors.txt"
     with open(anchors_path) as f:
         anchors = f.readline()
     anchors = [float(x) for x in anchors.split(',')]
@@ -54,6 +53,7 @@ def setup_parser(test_args):
     parser.add_argument("--demo",action="store_true", help="run demo on your image")
     parser.add_argument("--image", help="path to your image for demo", default="/data1/000000350003.jpg", type=str)
     parser.add_argument("--path", help="directory of your images", default="/workspace/COCO/valid2017", type=str)
+    parser.add_argument("--anchors", help="path to your anchors", default="/data1/keras_yolo3/model_data/yolo_anchors.txt", type=str)
     parser.add_argument("--nef", help="path to your nef model", default="/data1/batch_compile/models_520.nef", type=str)    
     parser.add_argument("--step", help="number of images for one model in every step", default=20, type=int)
     parser.add_argument("--init", help="initialization time between models", default=10, type=int)
@@ -62,7 +62,7 @@ def setup_parser(test_args):
     parser.add_argument("--img-size", help="image size", default=416, type=int)
     parser.add_argument("--conf-t", help="confidence threshold", default=0.6, type=float) 
     parser.add_argument("--iou-t", help="iou threshold for NMS", default=0.5, type=float)
-    #TODO add anchors
+
     return parser.parse_args(test_args)
         
 
@@ -83,7 +83,7 @@ def main(test_args = None):
 
         # Postprocess
         tic = time()
-        det_res = postprocess(out_data, [input_image.size[1], input_image.size[0]], args.conf_t  , args.iou_t)
+        det_res = postprocess(out_data, [input_image.size[1], input_image.size[0]], args.conf_t  , args.iou_t, args.anchors)
         print(f'postprocess time {(time()-tic):.2f}')
         print(det_res)
         
@@ -140,7 +140,7 @@ def main(test_args = None):
             
             # Postprocess
             tic = time()
-            det_res = postprocess(out_data, [image_shape[count][1], image_shape[count][0]], args.conf_t, args.iou_t)
+            det_res = postprocess(out_data, [image_shape[count][1], image_shape[count][0]], args.conf_t, args.iou_t, args.anchors)
             print(f'postprocess time {(time()-tic):.2f}') 
             
             # Write predictions in YOLO style
