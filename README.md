@@ -58,7 +58,7 @@ When all procedures in notebook are done, use https://github.com/rafaelpadilla/r
 | :---------------: | :--------------------: | :----------------:|
 |   Yolov3-520      | 0.254                  | 0.491             | 
 |   Yolov3-720      | 0.252                  | 0.489             | 
-| pjreddie's YOLOv3 | 0.330                  | 0.553             |
+| pjreddie's YOLOv3 | 0.310                  | 0.553             |
 ## Yolov3-tiny
 |            model       | mAP @<br>IoU=0.5:0.95  |  mAP @<br>IoU=0.5  |  
 | :--------------------: | :--------------------: | :----------------: |
@@ -66,4 +66,4 @@ When all procedures in notebook are done, use https://github.com/rafaelpadilla/r
 |   Yolov3-tiny-720      | 0.110                  | 0.252              | 
 | pjreddie's YOLOv3-tiny | 0.144                  | 0.325              | 
 # Conclusion
-Convertation slightly decreases mAP50 on Yolov3 by 10% and mAP50..95 by 23%. Converted yolov3-tiny loses 20% on mAP50 and mAP50..95. We observe difference between confidence on predictions of models for Kneron KL520 and Kneron KL720 due to different convertation to nef procedures. So models for KL520 showing a little bit better results than models for KL720.
+Convertation slightly decreases mAP50 on Yolov3 by 10% and mAP50..95 by 18%. Converted yolov3-tiny loses 20% on mAP50 and mAP50..95. We observe difference between confidence on predictions of models for Kneron KL520 and Kneron KL720 due to different convertation to nef procedures. So models for KL520 showing a little bit better results than models for KL720.
